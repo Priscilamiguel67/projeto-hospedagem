@@ -24,10 +24,7 @@ namespace DesafioProjetoHospedagem.Models
 
         public void CadastrarHospedes(List<Pessoa> hospedes)
         {
-            if (Suite == null)
-            {
-                throw new InvalidOperationException("Suite não cadastrada. Cadastre uma suite antes de cadastrar hóspedes.");
-            }
+        
 
             // Verificar se a capacidade é maior ou igual ao número de hóspedes sendo recebido
             if (Suite.Capacidade >= hospedes.Count)
@@ -54,10 +51,7 @@ namespace DesafioProjetoHospedagem.Models
 
         public decimal CalcularValorDiaria()
         {
-            if (Suite == null)
-            {
-                throw new InvalidOperationException("Suite não cadastrada. Cadastre uma suite antes de calcular o valor da diária.");
-            }
+        
 
             // Retorna o valor da diária
             decimal valor = DiasReservados * Suite.ValorDiaria;
